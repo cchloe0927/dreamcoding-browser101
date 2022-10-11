@@ -53,28 +53,34 @@ button {
     font-weight: bold;
     padding-top: 5px;
     background-color: aliceblue;
+    visibility: hidden;
+    user-select: none;
+    cursor: auto;
 }
 .game__score {
+    padding-top: 7px;
+    padding-left: 1px;
     background-color: aliceblue;
     color: #F27044;
     border: 3px solid black;
     border-radius: 50px;
     width: 50px;
     height: 50px;
-    font-size: 48px;
+    font-size: 38px;
     font-weight: bold;
     text-align: center;
+    visibility: hidden;
+    user-select: none;
+    cursor: auto;
 }
 
 .game__field {
+    position: relative;
     width: 100vw;
     height: 480px;
 }
 
 /* pop-up section */
-.pop-up--hide {
-    display: none;
-}
 .pop-up {
     display: block;
     text-align: center;
@@ -85,9 +91,13 @@ button {
     height: 150px;
     border-radius: 20px;
     padding: 20px;
-
     transform: translateY(-270%);
 }
+
+.pop-up--hide {
+    display: none;
+}
+
 .pop-up__refresh {
     margin: auto;
     margin-top: 20px;
@@ -97,6 +107,7 @@ button {
     height: 60px;
     background-color: #F27044;
 }
+
 .pop-up__refresh-replay {
     font-size: 32px;
     transition: transform 300ms ease-in;
@@ -104,9 +115,24 @@ button {
 .pop-up__refresh-replay:hover {
     transform: scale(1.1);
 }
+
 .pop-up__message {
     margin-top: 30px;
     margin: auto;
     display: block;
     font-size: 38px;
+}
+
+.hide {
+    display: none;
+}
+  
+
+.carrot,
+.bug {
+    transition: transform 100ms ease-in;
+}
+.carrot:hover,
+.bug:hover {
+    transform: scale(1.1);
 }
